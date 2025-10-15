@@ -137,7 +137,7 @@ jobs:
       matrix:
         # Note: keep this in sync with the Windows matrix in package-release.yml
         php: [ "8.1", "8.2", "8.3", "8.4", "8.5" ]
-        arch: [ x64, amd64_x86 ]
+        arch: [ x64, x86 ]
         ts: [ ts, nts ]
 
   test-system-libs:
