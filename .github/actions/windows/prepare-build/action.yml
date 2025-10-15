@@ -33,7 +33,7 @@ runs:
     - name: Enable Developer Command Prompt
       uses: ilammy/msvc-dev-cmd@v1
       with:
-        arch: ${{ inputs.arch }}
+        arch: ${{ inputs.arch == 'x86' && 'amd64_x86' || inputs.arch }}  
         toolset: ${{ steps.setup-php.outputs.toolset }}
 
     - name: phpize
